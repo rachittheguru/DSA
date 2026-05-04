@@ -11,7 +11,6 @@ class Solution {
             }
         }
 
-        // Step 2: Reverse each row
         for (int i = 0; i < n; i++) {
             int left = 0, right = n - 1;
             while (left < right) {
