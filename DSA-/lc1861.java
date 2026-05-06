@@ -8,9 +8,8 @@ class Solution {
 
             for (int j = n - 1; j >= 0; j--) {
                 if (box[i][j] == '*') {
-                    empty = j - 1; // reset after obstacle
+                    empty = j - 1; 
                 } else if (box[i][j] == '#') {
-                    // move stone to "empty" position
                     char temp = box[i][empty];
                     box[i][empty] = '#';
                     box[i][j] = temp == '#' ? '#' : '.';
