@@ -1,4 +1,3 @@
-// tree vertical traversal
 class Solution {
     static class NodeInfo {
         int col, row, val;
