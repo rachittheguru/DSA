@@ -1,3 +1,4 @@
+// max depth in a tree
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root==null){
