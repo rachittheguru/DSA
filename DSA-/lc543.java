@@ -1,3 +1,4 @@
+// diameter of a binary tree
 class Solution {
      private int diameter =0 ;
     public int diameterOfBinaryTree(TreeNode root) {
