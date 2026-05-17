@@ -9,14 +9,11 @@ class Solution {
             int num =nums[i%n];
             while(!stack.isEmpty() && nums[stack.peek()]< num){
                 res[stack.pop()]=num;
-
             }
             if(i<n){
                 stack.push(i);
             }
-
         }
         return res ;
-        
     }
 }
