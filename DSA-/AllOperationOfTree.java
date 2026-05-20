@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SizeMax {
+public class sizeofTree {
     static int s=0;
     public static class Node {
         int data;
@@ -11,14 +11,11 @@ public class SizeMax {
             this.data = data;
             left = right = null;
         }
-
     }
-
         // recursive call
         public static void preorder(Node root) {
             if (root == null) return;
            // s++;
-
             System.out.print(root.data + " "); 
             preorder(root.left);             
             preorder(root.right);            
@@ -31,6 +28,7 @@ public class SizeMax {
         if(root==null) return 0;
         return root.data+sum(root.left)+sum(root.right);
         }
+        // so find max we will compare the root with left and right and return the max of them 
         public static int max(Node root){
         if(root==null) return Integer.MIN_VALUE;
         int a= root.data;
@@ -38,6 +36,7 @@ public class SizeMax {
         int c =max(root.right);
         return Math.max(a,Math.max(b,c));
         }
+        
         public static int height(Node root){
         if(root==null)return 0;
         if(root.left ==null|| root.right==null) return 0;
@@ -86,6 +85,11 @@ public class SizeMax {
                 q.remove();
             }
         }
+
+
+
+
+        
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);

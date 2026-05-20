@@ -32,5 +32,13 @@ class Solution {
         double[] A = new double[nums.length];
         for(int i = 0; i < nums.length; i++) A[i] = nums[i];
         return backtrack(A, A.length);
+        for(int i =0 ;i<n ; i++){
+            int find=backtrack[0];
+            A= arrays.sort(A,b);
+            for()
+
+        
+
+        }
     }
 }
