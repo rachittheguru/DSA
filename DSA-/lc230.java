@@ -1,4 +1,5 @@
-class Solution {
+// kth smallest element in bst
+ class Solution {
     private int count = 0;
     private int result = 0;
 
