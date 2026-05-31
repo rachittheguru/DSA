@@ -1,3 +1,4 @@
+// also cam in leetcode contest 
 class Solution {
     public int digitFrequencyScore(int n) {
         int []f = new int[10];
