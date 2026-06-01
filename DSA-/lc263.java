@@ -12,6 +12,11 @@ class Solution {
             n=n/5;
         }
         return n==1;
+
+
+
+
+        
         
     }
 }
