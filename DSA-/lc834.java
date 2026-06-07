@@ -1,3 +1,4 @@
+// sum of distances in trees
 class Solution {
     int[] res;
     int[] count;
@@ -7,11 +8,9 @@ class Solution {
         res = new int[n];
         count = new int[n];
         tree = new ArrayList<>();
-
         for (int i = 0; i < n; i++) {
             tree.add(new HashSet<>());
         }
-
         for (int[] edge : edges) {
             tree.get(edge[0]).add(edge[1]);
             tree.get(edge[1]).add(edge[0]);
