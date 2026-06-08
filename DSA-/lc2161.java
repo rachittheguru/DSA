@@ -19,7 +19,6 @@ class Solution {
             }
         }
         
-        // Step 2: Fill the remaining middle slots with the pivot value
         while (left <= right) {
             result[left++] = pivot;
         }
