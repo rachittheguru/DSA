@@ -9,7 +9,6 @@ class Solution {
         int left = 0;
         int right = n - 1;
         
-        // Step 1: Place smaller elements from left, larger from right
         for (int i = 0, j = n - 1; i < n; i++, j--) {
             if (nums[i] < pivot) {
                 result[left++] = nums[i];
