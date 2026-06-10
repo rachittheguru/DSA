@@ -4,7 +4,6 @@ class SparseTableRMQ {
     int[][] fMax;
     int[][] fMin;
     int[] lg;
-
     public SparseTableRMQ(int[] data) {
         n = data.length;
         maxLog = 32 - Integer.numberOfLeadingZeros(n) + 1;
@@ -16,19 +15,16 @@ class SparseTableRMQ {
         for (int i = 2; i <= n; i++) {
             lg[i] = lg[i >> 1] + 1;
         }
-
         for (int i = 0; i < n; i++) {
             fMax[i][0] = data[i];
             fMin[i][0] = data[i];
         }
-
         for (int j = 1; j < maxLog; j++) {
             for (int i = 0; i <= n - (1 << j); i++) {
                 fMax[i][j] = Math.max(
                     fMax[i][j - 1],
                     fMax[i + (1 << (j - 1))][j - 1]
                 );
-
                 fMin[i][j] = Math.min(
                     fMin[i][j - 1],
                     fMin[i + (1 << (j - 1))][j - 1]
@@ -36,7 +32,6 @@ class SparseTableRMQ {
             }
         }
     }
-
     public int queryMax(int l, int r) {
         int k = lg[r - l + 1];
         return Math.max(
@@ -44,7 +39,6 @@ class SparseTableRMQ {
             fMax[r - (1 << k) + 1][k]
         );
     }
-
     public int queryMin(int l, int r) {
         int k = lg[r - l + 1];
         return Math.min(
@@ -53,7 +47,6 @@ class SparseTableRMQ {
         );
     }
 }
-
 class Solution {
     public long maxTotalValue(int[] nums, int k) {
         int n = nums.length;
