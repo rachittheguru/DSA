@@ -46,7 +46,7 @@ class SparseTableRMQ {
             fMin[r - (1 << k) + 1][k]
         );
     }
-}
+}lc
 class Solution {
     public long maxTotalValue(int[] nums, int k) {
         int n = nums.length;
