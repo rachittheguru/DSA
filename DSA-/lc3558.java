@@ -1,8 +1,6 @@
 class Solution {
-    
     int[] h;
     static int mod = 1000000007;
-
     public void dfs(int node,List<List<Integer>> ls,int par,int[] h,int hh){
         h[node] = hh;
         for(int i : ls.get(node)){
@@ -11,7 +9,6 @@ class Solution {
             }
         }
     }
-    
     private int modPow(long base, int exp) {
         long res = 1;
         while (exp > 0) {
@@ -21,7 +18,6 @@ class Solution {
         }
         return (int) res;
     }
-    
     public int assignEdgeWeights(int[][] edges) {
         List<List<Integer>> ls = new ArrayList<>();
         int n = edges.length;
