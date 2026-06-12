@@ -1,31 +1,25 @@
 class LCA {
-
     private int n;
     private int m;
     private int[] d;
     private List<Integer>[] e;
     private int[][] f;
-
     public LCA(int[][] edges, int root) {
         n = edges.length + 1;
         m = (int) (Math.log(n) / Math.log(2)) + 1;
         e = new ArrayList[n + 1];
         d = new int[n + 1];
         f = new int[n + 1][m];
-
         for (int i = 0; i <= n; i++) {
             e[i] = new ArrayList<>();
         }
-
         for (int[] edge : edges) {
             int u = edge[0];
             int v = edge[1];
             e[u].add(v);
             e[v].add(u);
         }
-
         dfs(root, 0);
-
         for (int i = 1; i < m; i++) {
             for (int x = 1; x <= n; x++) {
                 f[x][i] = f[f[x][i - 1]][i - 1];
