@@ -1,25 +1,45 @@
 class Solution {
     public char processStr(String s, long k) {
-        int n = s.length();
         long len = 0;
-        for(int i = 0; i < n; i++) {
-            char c = s.charAt(i);
-            if(c == '*') {
-                if(len > 0) len--;
-            }else if(c == '#') len <<= 1;
-            else if(c != '%') len++;
-        }
-        if(k >= len) return '.';
 
-        for(int i = n - 1; i >= 0; i--) {
-            char c = s.charAt(i);
-            if(c == '*') len++;
-            else if(c == '%') k = len - 1 - k;
-            else if(c == '#') {
-                len >>= 1;
-                if(k >= len) k -= len;
-            }else if(k == --len) return c;
+        // Calculate final length
+        for (char c : s.toCharArray()) {
+            if (c == '*') {
+                len = Math.max(0, len - 1);
+            } else if (c == '#') {
+                len *= 2;
+            } else if (c == '%') {
+                // length unchanged
+            } else {
+                len++;
+            }
         }
+
+        if (k >= len) {
+            return '.';
+        }
+
+        // Work backwards
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char c = s.charAt(i);
+
+            if (c == '*') {
+                len++;
+            } else if (c == '#') {
+                len /= 2;
+                if (k >= len) {
+                    k -= len;
+                }
+            } else if (c == '%') {
+                k = len - 1 - k;
+            } else {
+                len--;
+                if (k == len) {
+                    return c;
+                }
+            }
+        }
+
         return '.';
     }
 }
