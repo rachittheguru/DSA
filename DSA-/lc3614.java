@@ -11,14 +11,11 @@ class Solution {
                 len++;
             }
         }
-
         if (k >= len) {
             return '.';
         }
-
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
-
             if (c == '*') {
                 len++;
             } else if (c == '#') {
@@ -35,7 +32,6 @@ class Solution {
                 }
             }
         }
-
         return '.';
     }
 }
