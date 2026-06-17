@@ -1,15 +1,12 @@
 class Solution {
     public char processStr(String s, long k) {
         long len = 0;
-
-        // Calculate final length
         for (char c : s.toCharArray()) {
             if (c == '*') {
                 len = Math.max(0, len - 1);
             } else if (c == '#') {
                 len *= 2;
             } else if (c == '%') {
-                // length unchanged
             } else {
                 len++;
             }
@@ -19,7 +16,6 @@ class Solution {
             return '.';
         }
 
-        // Work backwards
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
 
