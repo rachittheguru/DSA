@@ -2,7 +2,7 @@ class Solution {
     public char processStr(String s, long k) {
         long len = 0;
         for (char c : s.toCharArray()) {
-            if (c == '*') {
+            if (c == '*'){
                 len = Math.max(0, len - 1);
             } else if (c == '#') {
                 len *= 2;
@@ -11,6 +11,7 @@ class Solution {
                 len++;
             }
         }
+
         if (k >= len) {
             return '.';
         }

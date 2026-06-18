@@ -24,18 +24,18 @@ class Solution {
                 res.add(new ArrayList<>());
                 prevCol = n.col;
             }
-            res.get(res.size()-1).add(n.val);
+            res.get(res.size()-1).add(n.val) ;
         }
 
-        return res;
+        return res ;
     }
 
     private void dfs(TreeNode node, int row, int col, List<NodeInfo> list){
         if(node == null) return;
 
-        list.add(new NodeInfo(col, row, node.val));
+        list.add(new NodeInfo(col, row, node.val)) ;
 
         dfs(node.left, row+1, col-1, list);
         dfs(node.right, row+1, col+1, list);
     }
-}   
+}
