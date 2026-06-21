@@ -8,6 +8,9 @@ class Solution {
             return n - 1;
         }
 
+/*
+for some reason i am here to find you
+it is the code to do some function in it it is neccesaary */
         Arrays.sort(restrictions, (a, b) -> Integer.compare(a[0], b[0]));
 
         restrictions[0][1] = Math.min(restrictions[0][1], restrictions[0][0] - 1);
