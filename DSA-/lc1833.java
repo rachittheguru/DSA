@@ -1,3 +1,4 @@
+// maxIceCream sol by sorting the cost 
 class Solution {
     public int maxIceCream(int[] costs, int coins) {
         Arrays.sort(costs);
