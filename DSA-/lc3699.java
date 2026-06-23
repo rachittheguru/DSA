@@ -1,3 +1,4 @@
+// zigZagArrays solution
 class Solution {
     public int zigZagArrays(int n, int l, int r) {
         int MOD = 1_000_000_007;
