@@ -8,7 +8,6 @@ class Solution {
 
         int ans = 1;
 
-        // Special case for 1
         if (map.containsKey(1)) {
             int count = map.get(1);
             ans = (count % 2 == 0) ? count - 1 : count;
@@ -26,7 +25,6 @@ class Solution {
                 curr = curr * curr;
             }
 
-            // add the middle element
             if (map.containsKey((int) curr)) {
                 len++;
             }
