@@ -1,3 +1,4 @@
+// number of substring containing all three characters
 class Solution {
     public int numberOfSubstrings(String s) {
         int[] count = new int[3];
