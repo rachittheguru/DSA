@@ -17,7 +17,6 @@ class Solution {
                 }
             }
         }
-        // boolean[][] vis =
         while (!q.isEmpty()) {
             int[] pop = q.poll();
             int r = pop[0], c = pop[1];
