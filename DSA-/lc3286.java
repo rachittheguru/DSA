@@ -1,3 +1,4 @@
+// find the minimum cost to reach the bottom-right corner of the grid from the top-left
 class Solution {
     public boolean findSafeWalk(List<List<Integer>> grid, int health) {
         int m = grid.size(), n = grid.get(0).size();
