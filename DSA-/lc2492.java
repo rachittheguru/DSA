@@ -1,5 +1,4 @@
 class Solution {
-
     List<int[]>[] graph;
     boolean[] visited;
     int ans = Integer.MAX_VALUE;
@@ -27,7 +26,6 @@ class Solution {
 
         return ans;
     }
-
     private void dfs(int node) {
 
         visited[node] = true;
