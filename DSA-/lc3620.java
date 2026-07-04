@@ -8,6 +8,7 @@ class Solution {
             g[i] = new ArrayList<>();
         }
 
+
         int l = Integer.MAX_VALUE,
             r = 0;
         for (int[] edge : edges) {
@@ -54,6 +55,7 @@ class Solution {
         }
         return r;
     }
+    
 
     private boolean check(int mid, long k, List<int[]>[] g, int[] deg, int n) {
         long[] dp = new long[n];
