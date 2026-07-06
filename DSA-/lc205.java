@@ -1,3 +1,4 @@
+// isomorphic problem is solved using hashmap 
 class Solution {
     public boolean isIsomorphic(String s, String t) {
         HashMap<Character,Character>map1=new HashMap<>();
