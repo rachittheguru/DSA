@@ -1,3 +1,4 @@
+//Concatenate Non-Zero Digits and Multiply by Sum I
 class Solution {
     public long sumAndMultiply(int n) {
         int p = 1;
