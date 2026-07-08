@@ -8,7 +8,6 @@ class Solution {
         int[] nonZeroCnt = new int[len + 1];
         long[] p10 = new long[len + 1];
         
-        // 预处理 10 的次幂取模
         p10[0] = 1;
         for (int i = 0; i < len; i++) {
             p10[i + 1] = (p10[i] * 10) % MOD;
@@ -30,17 +29,13 @@ class Solution {
             int start = queries[i][0];
             int end = queries[i][1];
             
-            // 区间数字和
             long sum = preSum[end + 1] - preSum[start];
             
-            // 区间非零数字个数
             int cnt = nonZeroCnt[end + 1] - nonZeroCnt[start];
             
-            // 计算拼接后的数字 x
             long subtract = (preProduct[start] * p10[cnt]) % MOD;
             long x = (preProduct[end + 1] - subtract + MOD) % MOD;
             
-            // 最终结果相乘再取模
             res[i] = (int) ((x * sum) % MOD);
         }
         
