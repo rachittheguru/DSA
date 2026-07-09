@@ -16,8 +16,6 @@ class Solution {
 
             comp[i] = com;
         }
-
-
         for (int i = 0; i < queries.length; i++) {
             int source = queries[i][0];
             int dest = queries[i][1];
