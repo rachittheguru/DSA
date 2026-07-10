@@ -1,3 +1,4 @@
+// path Existence queries
 class Solution {
     public int[] pathExistenceQueries(int n, int[] nums, int maxDiff, int[][] queries) {
         int m = queries.length, l = 1;
