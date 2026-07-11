@@ -1,3 +1,4 @@
+//graph solution 
 class Solution {
     public int countCompleteComponents(int n, int[][] edges) {
         int[] parent = new int[n];
