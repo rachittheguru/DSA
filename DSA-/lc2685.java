@@ -1,10 +1,9 @@
-//graph solution 
+//graph solution of the sries 
 class Solution {
     public int countCompleteComponents(int n, int[][] edges) {
         int[] parent = new int[n];
         int[] nodeCount = new int[n];
         int[] edgeCount = new int[n];
-        
         for (int i = 0; i < n; i++) {
             parent[i] = i;
             nodeCount[i] = 1;
@@ -15,7 +14,6 @@ class Solution {
             
             int rootU = find(u, parent);
             int rootV = find(v, parent);
-            
             if (rootU != rootV) {
                 parent[rootV] = rootU;
                 nodeCount[rootU] += nodeCount[rootV];
@@ -24,9 +22,7 @@ class Solution {
                 edgeCount[rootU]++;
             }
         }
-        
         int completeComponents = 0;
-        
         for (int i = 0; i < n; i++) {
             if (parent[i] == i) { 
                 int nodes = nodeCount[i];
@@ -37,7 +33,6 @@ class Solution {
                 }
             }
         }
-        
         return completeComponents;
     }
         private int find(int i, int[] parent) {
