@@ -1,3 +1,4 @@
+// gcd values
 class Solution {
     public int[] gcdValues(int[] nums, long[] queries) {
         int max = 0;
