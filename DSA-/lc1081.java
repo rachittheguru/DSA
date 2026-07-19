@@ -1,3 +1,4 @@
+// sol of the daily problem
 class Solution {
     public String smallestSubsequence(String s) {
         int[] freq = new int[26];
