@@ -10,7 +10,6 @@ class Solution {
 
         return gcd(min, max);
     }
-
     private int gcd(int a, int b) {
         while (b != 0) {
             int temp = b;
