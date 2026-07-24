@@ -1,3 +1,4 @@
+// leet code question 
 class Group {
   public int start;
   public int length;
@@ -6,7 +7,6 @@ class Group {
     this.length = length;
   }
 }
-
 class SparseTable {
   public SparseTable(int[] nums) {
     n = nums.length;
@@ -29,7 +29,6 @@ class SparseTable {
     return Integer.SIZE - Integer.numberOfLeadingZeros(n);
   }
 }
-
 class Solution {
   public List<Integer> maxActiveSectionsAfterTrade(String s, int[][] queries) {
     final int n = s.length();
