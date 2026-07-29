@@ -1,3 +1,4 @@
+// solution 
 class Solution {
     public int maxProduct(int[] nums) {
         int max1 = 0, max2 = 0;
