@@ -3,12 +3,10 @@ class Solution {
         int n = nums.length;
         int[][] dp = new int[n][n];
 
-        // Base case: if only one number is left
         for (int i = 0; i < n; i++) {
             dp[i][i] = nums[i];
         }
 
-        // Fill DP table
         for (int len = 2; len <= n; len++) {
             for (int i = 0; i <= n - len; i++) {
                 int j = i + len - 1;
