@@ -8,6 +8,9 @@ class Solution {
             dp[i][i] = nums[i];
         }
 
+
+        
+
         for (int len = 2; len <= n; len++) {
             for (int i = 0; i <= n - len; i++) {
                 int j = i + len - 1;
