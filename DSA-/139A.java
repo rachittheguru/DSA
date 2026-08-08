@@ -1,6 +1,4 @@
-import java.util.Scanner;
-class Main{
-    public static void main(String[]args){
+class Main{    public static void main(String[]args){
         int n = sc.nextInt();
         int [] days = new int[n];
         for(int i =0;i<n;i++){
