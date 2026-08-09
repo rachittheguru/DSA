@@ -7,7 +7,6 @@ class Solution {
             n++;
         }
     }
-
     private int digitProduct(int num) {
         int product = 1;
 
@@ -15,7 +14,6 @@ class Solution {
             product *= (num % 10);
             num /= 10;
         }
-
         return product;
     }
 }
