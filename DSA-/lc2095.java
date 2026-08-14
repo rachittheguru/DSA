@@ -9,7 +9,6 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-
         prev.next = slow.next;
         return head;
     }
