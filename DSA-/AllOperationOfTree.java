@@ -28,7 +28,6 @@ public class sizeofTree {
         if(root==null) return 0;
         return root.data+sum(root.left)+sum(root.right);
         }
-        
         public static int max(Node root){
         if(root==null) return Integer.MIN_VALUE;
         int a= root.data;
@@ -36,7 +35,6 @@ public class sizeofTree {
         int c =max(root.right);
         return Math.max(a,Math.max(b,c));
         }
-        
         public static int height(Node root){
         if(root==null)return 0;
         if(root.left ==null|| root.right==null) return 0;
@@ -55,7 +53,7 @@ public class sizeofTree {
         }
         public static void inorder(Node root){
         if(root == null) return;
-
+        
         inorder(root.left);
         System.out.print(root.data + " ");
         inorder(root.right);
