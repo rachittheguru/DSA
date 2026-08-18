@@ -28,7 +28,7 @@ public class sizeofTree {
         if(root==null) return 0;
         return root.data+sum(root.left)+sum(root.right);
         }
-        // so find max we will compare the root with left and right and return the max of them 
+        
         public static int max(Node root){
         if(root==null) return Integer.MIN_VALUE;
         int a= root.data;
