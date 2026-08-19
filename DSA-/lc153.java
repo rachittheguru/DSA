@@ -10,7 +10,6 @@ class Solution {
                 // Minimum is to the right of mid
                 left = mid + 1;
             } else {
-                // Minimum is at mid or to the left
                 right = mid;
             }
         }
