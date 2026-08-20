@@ -21,7 +21,6 @@ class Solution {
             
         }
         return ans;
-        
     }
     private boolean ispossible(int[] arr , int k , int distance ){
         int cows=1;
