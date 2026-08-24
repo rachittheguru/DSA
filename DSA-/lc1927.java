@@ -1,3 +1,4 @@
+// sun game solution 
 class Solution {
     public boolean sumGame(String num) {
         int n = num.length();
