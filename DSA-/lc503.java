@@ -1,4 +1,3 @@
-// next greater element in circular array
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
         int n =nums.length;
