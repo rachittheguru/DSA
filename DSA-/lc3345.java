@@ -1,4 +1,3 @@
-// solution
 class Solution {
     public int smallestNumber(int n, int t) {
         while (true) {
@@ -18,3 +17,4 @@ class Solution {
         return product;
     }
 }
+// so for the same problem in the game wayy in the right track is
