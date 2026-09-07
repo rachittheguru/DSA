@@ -1,4 +1,3 @@
-// agressive cow problem
 class Solution {
     public int aggressiveCows(int[] arr, int k) {
         Arrays.sort(arr);
