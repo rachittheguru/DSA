@@ -1,6 +1,5 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
 public class sizeofTree {
     static int s=0;
     public static class Node {
@@ -11,9 +10,7 @@ public class sizeofTree {
             this.data = data;
             left = right = null;
         }
-    }
-        // recursive call
-        public static void preorder(Node root) {
+    }        public static void preorder(Node root) {
             if (root == null) return;
            // s++;
             System.out.print(root.data + " "); 
