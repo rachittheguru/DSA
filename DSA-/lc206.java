@@ -1,5 +1,5 @@
 
-// class Solution {
+ class Solution {
     public ListNode reverseList(ListNode head){
         Listnode current =head;
         ListNode prev = null;
